@@ -62,4 +62,8 @@ app.get("/read", async (req, res) => {
     }
 })
 
+app.get('/', (req, res) => {
+    res.send('111111111111111111111111')
+})
+
 app.listen(3000, () => console.log('Server is running on port 3000'));
