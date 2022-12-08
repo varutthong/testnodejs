@@ -63,7 +63,8 @@ app.get("/read", async (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('111111111111111111111111')
+    return res.send('111111111111111111111111')
+    
 })
 
 
