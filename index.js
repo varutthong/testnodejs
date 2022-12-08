@@ -45,15 +45,16 @@ app.post("/create", async (req, res) => {
 
 // READ
 app.get("/read", async (req, res) => {
+    const results = [{"name":"rut","score":"10"},{"name":"non","score":"20"},{"name":"max","score":"30"},{"name":"man","score":"40"},{"name":"gae","score":"50"}]
     try{
-        connection.query("SELECT * FROM user", (err, results, fields) => {
-            if(err){
-                console.log(err);
-                return res.status(400).send();
-            }
-            res.status(200).json(results)
-        })
-
+        // connection.query("SELECT * FROM user", (err, results, fields) => {
+        //     if(err){
+        //         console.log(err);
+        //         return res.status(400).send();
+        //     }
+        //     res.status(200).json(results)
+        // })
+        res.status(200).json(results)
     }catch(err){
         console.log(err);
         return res.status(500).send();
