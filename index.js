@@ -3,6 +3,11 @@ const mysql = require('mysql');
 
 const app = express();
 app.use(express.json());
+app.use((req, res, next)  => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    next();
+    })
 
 // Mysql connection
 const connection = mysql.createConnection({
