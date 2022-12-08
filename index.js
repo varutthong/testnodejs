@@ -45,7 +45,7 @@ app.post("/create", async (req, res) => {
 
 // READ
 app.get("/read", async (req, res) => {
-    const results = [{"name":"rut","score":"10"},{"name":"non","score":"20"},{"name":"max","score":"30"},{"name":"man","score":"40"},{"name":"gae","score":"50"}]
+    const results = {"name":"rut","score":"10"}
     try{
         // connection.query("SELECT * FROM user", (err, results, fields) => {
         //     if(err){
