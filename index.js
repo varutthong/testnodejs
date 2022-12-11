@@ -68,7 +68,7 @@ app.use((req, res, next)  => {
 // })
 
 app.get('/', (req, res) => {
-    return res.send('Hello world')
+    return res.json('Hello world')
     
 })
 
