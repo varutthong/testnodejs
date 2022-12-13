@@ -1,6 +1,6 @@
-const express = require('express')
+const express = require('express');
 const mysql = require('mysql');
-
+const bodyParser = require('body-parser')
 const app = express();
 app.use(express.json());
 app.use((req, res, next)  => {
@@ -9,7 +9,7 @@ app.use((req, res, next)  => {
     next();
     })
 
-// Mysql connection
+//Mysql connection
 // const connection = mysql.createConnection({
 //     host: 'localhost',
 //     user: 'root',
@@ -27,7 +27,7 @@ app.use((req, res, next)  => {
 //     console.log('Mysql successfully connected!');
 // })
 
-// // create routes
+// create routes
 // app.post("/create", async (req, res) => {
 //     const { name, score} =req.body;
 //     try{
@@ -50,14 +50,16 @@ app.use((req, res, next)  => {
 
 // READ
 app.get("/read", async (req, res) => {
-    const results = [
+    const results = 
+        [      
             {name:"rut",score:"10"},
             {name:"non",score:"20"},
             {name:"max",score:"30"},
             {name:"man",score:"40"},
-            {name:"gae",score:"50"}
+            {name:"gae",score:"50"}         
         ]
     try{
+        
         // connection.query("SELECT * FROM user", (err, results, fields) => {
         //     if(err){
         //         console.log(err);
@@ -65,7 +67,7 @@ app.get("/read", async (req, res) => {
         //     }
         //     res.status(200).json(results)
         // })
-        res.status(200).json(results)
+         res.status(200).json({user:results})
     }catch(err){
         console.log(err);
         return res.status(500).send();
