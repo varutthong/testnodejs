@@ -51,11 +51,11 @@ app.use((req, res, next)  => {
 // READ
 app.get("/read", async (req, res) => {
     const results = [
-            {"name":rut,"score":10},
-            {"name":non,"score":20},
-            {"name":max,"score":30},
-            {"name":man,"score":40},
-            {"name":gae,"score":50}
+            {name:"rut",score:"10"},
+            {name:"non",score:"20"},
+            {name:"max",score:"30"},
+            {name:"man",score:"40"},
+            {name:"gae",score:"50"}
         ]
     try{
         // connection.query("SELECT * FROM user", (err, results, fields) => {
@@ -74,7 +74,7 @@ app.get("/read", async (req, res) => {
 })
 
  app.get('/', (req, res) => {
-     return res.json('Hello world test')
+     res.json('Hello world test')
     
  })
 
