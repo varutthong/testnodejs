@@ -52,11 +52,7 @@ app.use((req, res, next)  => {
 app.get("/read", (req, res) => {
     const results = 
         [      
-            {name:"rut",score:"10"},
-            {name:"non",score:"20"},
-            {name:"max",score:"30"},
-            {name:"man",score:"40"},
-            {name:"gae",score:"50"}         
+            "rut",10,"non",20,"max",30                    
         ]
     try{
         
