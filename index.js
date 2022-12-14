@@ -67,7 +67,7 @@ app.get("/read", async (req, res) => {
         //     }
         //     res.status(200).json(results)
         // })
-         res.status(200).json({user:results});
+         res.status(200).json(results);
     }catch(err){
         console.log(err);
         return res.status(500).send();
