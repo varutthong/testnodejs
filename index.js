@@ -52,7 +52,9 @@ app.use((req, res, next)  => {
 app.get("/read", (req, res) => {
     const results = 
         [      
-            rut,10,non,20,max,30                    
+            {name:"rut",score:10},
+            {name:"max",score:20},
+            {name:"non",score:30}                  
         ]
     try{
         
@@ -63,7 +65,7 @@ app.get("/read", (req, res) => {
         //     }
         //     res.status(200).json(results)
         // })
-         res.status(200).json(results);
+         res.status(200).json({user:results});
     }catch(err){
         console.log(err);
         return res.status(500).send();
