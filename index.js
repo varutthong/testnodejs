@@ -52,7 +52,7 @@ app.use((req, res, next)  => {
 app.get("/read", (req, res) => {
     const results = 
         [      
-            "rut",10,"non",20,"max",30                    
+            rut,10,non,20,max,30                    
         ]
     try{
         
