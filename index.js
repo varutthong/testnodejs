@@ -28,7 +28,7 @@ app.use((req, res, next)  => {
 // })
 
 // create routes
-// app.post("/create", async (req, res) => {
+// app.post("/create", (req, res) => {
 //     const { name, score} =req.body;
 //     try{
 //         connection.query(
@@ -49,7 +49,7 @@ app.use((req, res, next)  => {
 // })
 
 // READ
-app.get("/read", async (req, res) => {
+app.get("/read", (req, res) => {
     const results = 
         [      
             {name:"rut",score:"10"},
