@@ -24,7 +24,6 @@ const results =
             {name:"max",score:20},
             {name:"non",score:30}                  
         ]
-const obj = Object.assign({}, results)
 
 app.get("/read", (req, res) => {
     
@@ -44,4 +43,4 @@ app.get("/read", (req, res) => {
 
 
 
-app.listen(3000, () => console.log('Server is running on port 3000'));
+app.listen(3000, () => console.log('Server is running on port 3000')); 
