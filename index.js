@@ -18,12 +18,12 @@ app.use((req, res, next)  => {
 // })
 
 // READ
-const results = 
-        [      
+const results = JSON.stringify([      
             {name:"rut",score:10},
             {name:"max",score:20},
             {name:"non",score:30}                  
-        ]
+        ]);
+        
 
 app.get("/read", (req, res) => {
     
@@ -37,7 +37,7 @@ app.get("/read", (req, res) => {
 })
 
  app.get('/', (req, res) => {
-     res.json('Hello world test')
+     res.send('Hello world test')
     
  })
 
