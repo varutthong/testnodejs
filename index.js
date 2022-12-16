@@ -18,17 +18,18 @@ app.use((req, res, next)  => {
 // })
 
 // READ
-const results = JSON.stringify([      
+const results = [      
             {name:"rut",score:10},
             {name:"max",score:20},
             {name:"non",score:30}                  
-        ]);
+        ];
         
+const user = JSON.stringify(results)
 
 app.get("/read", (req, res) => {
     
     try{
-         res.status(200).json({user:results});
+         res.status(200).json(user);
     }catch(err){
         console.log(err);
         return res.status(500).send();
