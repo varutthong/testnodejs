@@ -29,7 +29,7 @@ const user = JSON.stringify(results)
 app.get("/read", (req, res) => {
     
     try{
-         res.status(200).json(user);
+         res.status(200).json({player:user});
     }catch(err){
         console.log(err);
         return res.status(500).send();
